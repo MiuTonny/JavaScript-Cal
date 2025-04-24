@@ -6,10 +6,10 @@ let history = [];
 // Calculator functions (+,-,*,/)
 
 function add(a, b) {
-    const result = a + b;
+    const result = a + b; // Calculate the result
     history.push({ operands: [a, b], operator: '+', result: result });
-    console.log(history); 
-    return result; 
+    console.log(history); // Log the history after calculation
+    return result; // Return the result
 }
 
 function subtract(a, b) {
@@ -29,8 +29,8 @@ function multiplication(a, b) {
 function division(a, b) {
     if (b === 0) {
         history.push({ operands: [a, b], operator: '/', result: 'Error: Division by zero' });
-        console.log(history); 
-        return 'Error: Division by zero'; 
+        console.log(history); // Log the history with error message
+        return 'Error: Division by zero'; // Return error message
     }
     const result = a / b; 
     history.push({ operands: [a, b], operator: '/', result: result });
